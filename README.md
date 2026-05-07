@@ -165,6 +165,6 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🙋‍♂️ Author
 
-Made with ❤️ by [Your Name](https://github.com/your-username)
+Made with ❤️ by [Anushka](https://github.com/bagadeanushka07-a11y)
 
 > *"Sometimes you gotta run before you can walk."* — Tony Stark
