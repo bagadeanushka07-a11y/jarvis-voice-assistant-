@@ -1,0 +1,27 @@
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs and temp files
+*.log
+*.tmp
+steps.txt
+
+# Test files (if you deleted them, they're gone anyway)
+test_*.py
+simple_*.py
+flask_backend.py
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>JARVIS | Neural Voice Interface</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+
+<div class="jarvis-container">
+    <div class="header">
+        <div class="logo-area">
+            <i class="fas fa-microchip logo-icon"></i>
+            <span class="title">J.A.R.V.I.S</span>
+        </div>
+        <div class="badge" id="connectionBadge">
+            <i class="fas fa-plug"></i> <span id="connStatus">Connecting...</span>
+        </div>
+    </div>
+
+    <div class="dashboard">
+        <div class="conversation-panel">
+            <div class="chat-header">
+                <i class="fas fa-comment-dots"></i> <span>NEURAL LOG · CONSOLE</span>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message jarvis-msg">
+                    <div class="msg-icon"><i class="fas fa-robot"></i></div>
+                    <div class="msg-content">JARVIS online. Voice interface active. Awaiting your commands, sir.<br><span class="timestamp">just now</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="control-panel">
+            <div class="mic-card">
+                <div class="mic-btn" id="micButton">
+                    <i class="fas fa-microphone"></i>
+                </div>
+                <div class="mic-status" id="micStatusText">WebSocket Connected</div>
+                <div class="wave inactive-wave" id="waveContainer">
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
+            </div>
+
+            <div class="visualizer">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+                    <span><i class="fas fa-brain"></i> Command Console</span>
+                    <span style="font-size: 0.7rem;"><i class="fas fa-circle" style="color:#0f6; font-size: 0.5rem;"></i> backend ready</span>
+                </div>
+                <div class="command-preview" id="commandPreview">
+                    — ready —
+                </div>
+                <div class="action-buttons">
+                    <button class="action-btn" id="clearChatBtn"><i class="fas fa-trash-alt"></i> Clear Log</button>
+                    <button class="action-btn" id="testCmdBtn"><i class="fas fa-plug"></i> Test Connection</button>
+                </div>
+            </div>
+            <div class="footer-note">
+                <i class="fas fa-microphone-alt"></i> Type command or use voice (sends to Python backend via WebSocket)
+            </div>
+        </div>
+    </div>
+    
+    <!-- Command Input -->
+    <div class="command-input-area">
+        <input type="text" id="commandInput" placeholder="Type a command here... (e.g., 'play shape of you', 'time', 'news')" />
+        <button id="sendCommandBtn"><i class="fas fa-paper-plane"></i> Send</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
